@@ -1,0 +1,183 @@
+
+                <style>
+                
+                [cs-header] [cs-header-logo] {
+                    height: 15vw;
+                }
+    
+                @media (min-width: 768px) {
+                    [cs-header] [cs-header-logo] {
+                        height: 9vw;
+                    }
+                }
+    
+                @media (min-width: 1024px) {
+                    [cs-header] [cs-header-logo] {
+                        height: 5.5vw;
+                    }
+                }
+    
+                @media (min-width: 1280px) {
+                    [cs-header] [cs-header-logo] {
+                        height: 4vw;
+                    }
+                }
+    
+                [cs-header] #CS_MOBILE_MENU_CONTAINER {
+                    cursor: pointer;
+                }
+    
+                [cs-header] #CS_MOBILE_MENU_CONTAINER > div {
+                    background-color: #ffffff;
+                }
+
+                [cs-header] [data-nav-list="desktop"] {
+                    max-width: 600px;
+                }
+    
+                [cs-header] [data-nav-list="desktop"] a, [cs-header] [data-nav-list="mobile"] a {
+                    color: #ffffff;
+                    white-space: nowrap;
+                }
+    
+                [cs-header] [data-nav-list="mobile"] {
+                    background-color: #292323;
+                    padding: 1rem 2rem;
+                    width: 100vw;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                    gap: 1rem;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                }
+    
+                @media (min-width: 768px) {
+                    [cs-header] [data-nav-list="mobile"] {
+                        display: none;
+                    }
+                }
+    
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                      to { opacity: 1; }
+                }
+    
+                @keyframes fadeOut {
+                    from { opacity: 1; }
+                      to { opacity: 0; }
+                }
+    
+                [cs-header] [data-group-nav-list="mobile"] {
+                    display: none;
+                    padding-left: 0.5rem;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+    
+                [cs-header] [data-group-nav-list="mobile"] > *:not(i) {
+                    font-size: 1.125rem;
+                }
+    
+                [cs-header] i {
+                    font-size: 1.5rem;
+                }
+    
+                [cs-header] [data-nav-id] [data-group-nav-list="desktop"] {
+                    background-color: #292323;
+                    position: absolute;
+                    top: 100%;
+                    width: fit;
+                    display: none;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(255 255 255 / 0.25);
+                    border: solid 2px rgb(255 255 255 / 0.25);
+                    transition: all 1s ease-in-out;
+                    padding: 1rem 1.5rem;
+                    width: fit;
+                    animation: fadeIn 300ms;
+                }
+    
+                [cs-header] [data-group-nav-list="desktop"] > * {
+                    white-space: nowrap;
+                }
+    
+                
+    
+                [cs-header] [data-cta] {
+                    cursor: pointer;
+                }
+    
+                [cs-header] [data-cta] > * {
+                    color: #ffffff;
+                }
+    
+                [cs-header] div[data-mobile-nav-id] {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                
+                [cs-header] [data-cta], [cs-header] [data-cta] a {
+                    width: 100%;
+                    white-space: nowrap;
+                }
+    
+                @media (min-width: 1024px) {
+                    [cs-header] div[data-mobile-nav-id] {
+                        width: fit-content;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    [cs-header] [data-cta], [cs-header] [data-cta] a {
+                        width: fit-content;
+                    }
+                }
+                
+                
+                [cs-header] {
+                    z-index: 99;
+                    position: fixed;
+                    width: 100%;
+                }
+                
+                </style>
+                <header coresel-persist cs-header data-section-theme="3">
+                    <div class="relative flex flex-row justify-between items-center p-4 pr-6 pl-6">
+                        <img cs-header-logo src="https://coresel.nyc3.cdn.digitaloceanspaces.com/core-3e198e0e258df9434/bb86cf89-1e42-476b-b057-697a870e0532.png"></img>
+                        <div class="flex flex-row justify-between items-center gap-12">
+                            <nav data-nav-list="desktop" class="hidden lg:flex flex-row justify-start items-center flex-wrap gap-4">
+            <a style="z-index: 5;" href="https://www.geteventsmeee.com/1707794648770_84f5">Contact Us</a>
+            </nav>
+                            
+        <div data-cta class="invisible">
+        </div>
+            
+                        </div>
+                        <div class="lg:hidden">
+            <div id="CS_MOBILE_MENU_CONTAINER" data-open="false" class="relative flex flex-col justify-center items-stretch gap-1 lg:hidden w-8 h-6">
+                <div class="w-full h-1 rounded-sm transition-all transition-300"></div>
+                <div class="w-full h-1 rounded-sm transition-all transition-300"></div>
+            </div>
+            </div>
+                        
+            <nav data-open="false" data-nav-list="mobile">
+            <a href="https://www.geteventsmeee.com/1707794648770_84f5">Contact Us</a>
+            
+        <div data-cta class="invisible">
+        </div>
+            
+            </nav>
+            
+                    </div>
+                </header>
+                <section data-padding="true" class='flex flex-col justify-start items-center py-4 px-4 lg:py-12 lg:px-8' id="5787bea4-4113-4757-b5f1-015076de41b6" data-section-theme="3" class="py-8 lg:py-12" style=""><div data-block='1' id="5787bea4-4113-4757-b5f1-015076de41b6@5edb4fb5-ee0f-48bd-8e8f-3a2c4e68980f" class='relative grid grid-cols-1 w-full'><div data-container data-align="left" data-padding="true" id="5787bea4-4113-4757-b5f1-015076de41b6@c3b6fd42-39ad-40c9-9d02-1abb8ea3a71b" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h2 id="5787bea4-4113-4757-b5f1-015076de41b6@0bbe35ed-bbd7-4056-b8e3-91c8218c7854" class="w-full " >Welcome to the Healing Journey</h2></div></div><div data-block='1' id="5787bea4-4113-4757-b5f1-015076de41b6@f5c00e7c-5159-4f96-9e59-57d036c40144" class='relative grid grid-cols-1 w-full'><div data-container data-align="left" data-padding="true" id="5787bea4-4113-4757-b5f1-015076de41b6@8fb0fff9-04af-4a58-9501-683f7e593c53" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><p id="5787bea4-4113-4757-b5f1-015076de41b6@6c2d115f-6827-4012-afbb-c6ddc065d5de" class="w-full " >Welcome to the healing journey with Dr. Stan J. Strycharz, Psy.D., a licensed psychologist passionately committed to fostering personal growth, healing, and transformation through therapy. With an approach rooted in supportive collaboration, Dr. Stan leverages your strengths and inner resources.</p><h3 id="5787bea4-4113-4757-b5f1-015076de41b6@49fc6cc9-89f1-4659-a415-675efa320a72" class="w-full " >Discover the Power of Therapy</h3><p id="5787bea4-4113-4757-b5f1-015076de41b6@48dbc71e-f415-46a4-b7ce-ade0187c558a" class="w-full " >Witness the power of therapy in restoring hope, enhancing self-confidence, and discovering fulfillment and joy. Embark on a path of exploration and emerge stronger, capable of harnessing happiness through the transformative healing of therapy. Let Dr. Stan guide you through this journey, offering a compassionate and understanding approach to overcoming life's challenges.</p><a id="5787bea4-4113-4757-b5f1-015076de41b6@4149d28b-f8f1-475d-a2d0-fab86a1c5a02" class="w-full " >Book Your Session</a></div></div></section><section data-padding="true" class='flex flex-col justify-start items-center py-4 px-4 lg:py-12 lg:px-8' id="be86444b-916c-4d4f-a141-e96dede455f2" data-section-theme="2" class="py-8 lg:py-12" style=""><div data-block='1' id="be86444b-916c-4d4f-a141-e96dede455f2@849286b8-38e9-447b-bdc9-b31ba1b8c5ec" class='relative grid grid-cols-1 w-full'><div data-container data-align="left" data-padding="true" id="be86444b-916c-4d4f-a141-e96dede455f2@11234480-eeae-4fa0-b88d-f342e623d1db" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h2 id="be86444b-916c-4d4f-a141-e96dede455f2@efd22e3c-4ba5-4219-b463-2059aa32bc97" class="w-full " >Meet Dr. Stan J. Strycharz</h2></div></div><div data-block='2' id="be86444b-916c-4d4f-a141-e96dede455f2@a82e8f16-0c56-43f5-aafd-484815ef6c7a" class='relative grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 w-full'><div data-container data-align="left" data-padding="true" id="be86444b-916c-4d4f-a141-e96dede455f2@3e1d4441-e544-422f-a9ca-5f8dbaafe99d" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h2 id="be86444b-916c-4d4f-a141-e96dede455f2@1fd6bdab-a6d9-48b8-abab-3ab384597571" class="w-full " >A Beacon of Wisdom in Counseling</h2><p id="be86444b-916c-4d4f-a141-e96dede455f2@fb496247-70ff-4be6-9700-408741d31994" class="w-full " >With over 20 years navigating the complex landscape of human emotions, Dr. Stan J. Strycharz stands out as more than just a counselor; he's a guiding light for those lost in the dark. Educated in the esteemed halls of Loyola University, where he earned his Master's in Counseling, Dr. Stan combines theoretical knowledge with a deep, empathetic understanding of the human condition. His practice, grounded in compassion and supported by extensive experience, provides a sanctuary for individuals seeking to overcome life's hurdles. Whether it's navigating personal loss, battling anxiety, or simply seeking a reflective space for growth, Dr. Stan's approach is both holistic and nurturing. Engage with his journey and witness the transformative power of his counseling—a testament to the profound impact one individual can have on many.</p><div uuid="be86444b-916c-4d4f-a141-e96dede455f2@accfc3ca-c674-4112-bf8c-c9fa3949b54b" class="w-full"><a id="accfc3ca-c674-4112-bf8c-c9fa3949b54b" class="button" >Discover More</a></div></div><div data-container data-align="left" data-padding="true" id="be86444b-916c-4d4f-a141-e96dede455f2@42ec6957-737a-47cf-8ce6-ddf05c1f8408" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><div uuid="be86444b-916c-4d4f-a141-e96dede455f2@93d46915-348a-4143-9fcb-d8169e3ba36f" class="w-full"><img id="be86444b-916c-4d4f-a141-e96dede455f2@93d46915-348a-4143-9fcb-d8169e3ba36f" loading="lazy" class="w-full h-full " ></img></div></div></div></section><section data-padding="true" class='flex flex-col justify-start items-center py-4 px-4 lg:py-12 lg:px-8' id="486b287d-a807-4970-b8cf-b5814ed395c2" data-section-theme="3" class="py-8 lg:py-12" style=""><div data-block='3' id="486b287d-a807-4970-b8cf-b5814ed395c2@d3eec304-7829-4614-84cc-cc785aaa0899" class='relative grid grid-cols-1 lg:grid-cols-3 lg:items-start gap-6 lg:gap-12 w-full'><div data-container data-align="left" data-padding="true" id="486b287d-a807-4970-b8cf-b5814ed395c2@ef1c40d3-f8e7-4bcc-b1db-fd99f86efa29" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><p id="486b287d-a807-4970-b8cf-b5814ed395c2@b7298e9c-20d8-4a28-95cc-c16338814abc" class="w-full " >Explore an array of therapy services tailored to meet your unique needs. Whether you're seeking to alleviate suffering, gain self-understanding, mourn a loss, reach forgiveness, or cultivate fulfilling relationships, Dr. Stan's therapeutic offerings are designed with your well-being in mind. Engage in modalities including mindfulness and meditation, aimed at harmonizing emotions and fostering inner peace. Embark on your transformative path today.</p></div><div data-container data-align="left" data-padding="true" id="486b287d-a807-4970-b8cf-b5814ed395c2@b60b596c-2c77-4f8f-a074-fc565efcc799" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h3 id="486b287d-a807-4970-b8cf-b5814ed395c2@e9a658ea-5afb-479a-8977-3d65c5c0c9dd" class="w-full " >Personalized Therapeutic Approaches</h3><p id="486b287d-a807-4970-b8cf-b5814ed395c2@a830b2dc-833f-48b5-b487-2ed84344bfac" class="w-full " >Our therapy services are highly personalized, designed to address your specific concerns and objectives. Through a combination of techniques including mindfulness and meditation, Dr. Stan specializes in harmonizing emotional states and enhancing your capacity for self-reflection and growth. Each session is an invitation to deepen your understanding of yourself and to advance towards a more centered and peaceful life.</p><a id="486b287d-a807-4970-b8cf-b5814ed395c2@edb08471-d092-4b72-92a9-b4d6ebea7d22" class="w-full " >Learn More</a></div><div data-container data-align="left" data-padding="true" id="486b287d-a807-4970-b8cf-b5814ed395c2@8aaa07f1-4018-4948-9d42-7e149e34f133" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h3 id="486b287d-a807-4970-b8cf-b5814ed395c2@312a3dda-c07d-457e-88d3-d36344e9194d" class="w-full " >Begin Your Journey Today</h3><p id="486b287d-a807-4970-b8cf-b5814ed395c2@8ed8f0d4-8828-4ba7-864f-fa7b904f3c36" class="w-full " >Taking the first step can often be the hardest, but it marks the beginning of a transformative journey. At Coresel AI, Inc., we are dedicated to supporting you through this process with empathy and professionalism. Your path to healing and growth is unique, and we are here to guide and walk beside you every step of the way. Contact us to embark on your journey towards inner peace and fulfillment.</p><div uuid="486b287d-a807-4970-b8cf-b5814ed395c2@f38e02df-57cc-45c9-a4b7-0892d6ae60f9" class="w-full"><a id="f38e02df-57cc-45c9-a4b7-0892d6ae60f9" class="button" >Contact Us</a></div></div></div></section><section data-padding="true" class='flex flex-col justify-start items-center py-4 px-4 lg:py-12 lg:px-8' id="d314ff0c-0471-465d-8d59-2030df32ff14" data-section-theme="1" class="py-8 lg:py-12" style=""><div data-block='1' id="d314ff0c-0471-465d-8d59-2030df32ff14@b3fce626-abe3-4b7a-b895-bc7b08762502" class='relative grid grid-cols-1 w-full'><div data-container data-align="left" data-padding="true" id="d314ff0c-0471-465d-8d59-2030df32ff14@c15fee81-64a1-4974-99e6-21a4c73e773b" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h2 id="d314ff0c-0471-465d-8d59-2030df32ff14@61a1d96d-5761-4c6e-bd6f-96b8d60f31b0" class="w-full " >FAQs & Mindfulness - Your Questions Answered and A Path to Mindfulness</h2></div></div><div data-block='4' id="d314ff0c-0471-465d-8d59-2030df32ff14@af531289-6037-4c1e-b598-30217a1bfe3e" class='relative grid grid-cols-1 lg:grid-cols-4 lg:items-start gap-6 lg:gap-12 w-full'><div data-container data-align="left" data-padding="true" id="d314ff0c-0471-465d-8d59-2030df32ff14@1551e18f-923d-4fc9-952e-7eb4aea57f0b" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h3 id="d314ff0c-0471-465d-8d59-2030df32ff14@91bfa45d-49f9-4275-a4ba-a249476cc7f2" class="w-full " >Exploring FAQs</h3><p id="d314ff0c-0471-465d-8d59-2030df32ff14@f572c96c-d94b-45fa-911e-3105ad7cc198" class="w-full " >Dr. Stan addresses common queries around the therapeutic journey, confidentiality, and session expectations.</p><a id="d314ff0c-0471-465d-8d59-2030df32ff14@88d88646-f23a-4773-9bc7-23c74a203fd2" class="w-full " >Learn More</a></div><div data-container data-align="left" data-padding="true" id="d314ff0c-0471-465d-8d59-2030df32ff14@46e81cba-d9ef-411d-a7db-3896b83a6a1e" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h3 id="d314ff0c-0471-465d-8d59-2030df32ff14@eaf3add9-e103-4cd3-8680-f14659368714" class="w-full " >Confidentiality Explained</h3><p id="d314ff0c-0471-465d-8d59-2030df32ff14@67681e89-b03a-41ef-9a30-7216b1fff20a" class="w-full " >Understand the importance of confidentiality and how it's maintained during your therapy sessions.</p><div uuid="d314ff0c-0471-465d-8d59-2030df32ff14@b0c75e90-924d-4a7e-bbed-da99eb15d02a" class="w-full"><a id="b0c75e90-924d-4a7e-bbed-da99eb15d02a" class="button" >Discover How</a></div></div><div data-container data-align="left" data-padding="true" id="d314ff0c-0471-465d-8d59-2030df32ff14@f4455843-c8f3-458a-b11e-c1982859fb4b" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h3 id="d314ff0c-0471-465d-8d59-2030df32ff14@f9b4c4a0-315c-4d69-ac9c-6059a4097ee7" class="w-full " >Mindfulness Meditation</h3><p id="d314ff0c-0471-465d-8d59-2030df32ff14@c3007756-6ee8-4217-b59b-d415f2be94f5" class="w-full " >Delve into a practice that supports deep emotional connection and effective regulation.</p><a id="d314ff0c-0471-465d-8d59-2030df32ff14@c527cf9c-9571-43d6-b131-83886e4a0bb4" class="w-full " >Start Meditating</a></div><div data-container data-align="left" data-padding="true" id="d314ff0c-0471-465d-8d59-2030df32ff14@594ae4c3-3850-4bbd-8229-335cb4e286c1" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><h3 id="d314ff0c-0471-465d-8d59-2030df32ff14@b418da76-87d0-49dc-bda8-55bc7a72ad39" class="w-full " >Journey to Emotional Equilibrium</h3><p id="d314ff0c-0471-465d-8d59-2030df32ff14@29b72274-40cf-4fd1-8609-3e105795181a" class="w-full " >Begin your path towards emotional balance and heightened awareness with our guidance.</p><div uuid="d314ff0c-0471-465d-8d59-2030df32ff14@252b8cb4-0206-4319-8752-94029adfa0cc" class="w-full"><a id="252b8cb4-0206-4319-8752-94029adfa0cc" class="button" >Begin Journey</a></div></div></div></section>

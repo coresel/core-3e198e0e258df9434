@@ -1,0 +1,183 @@
+
+                <style>
+                
+                [cs-header] [cs-header-logo] {
+                    height: 15vw;
+                }
+    
+                @media (min-width: 768px) {
+                    [cs-header] [cs-header-logo] {
+                        height: 9vw;
+                    }
+                }
+    
+                @media (min-width: 1024px) {
+                    [cs-header] [cs-header-logo] {
+                        height: 5.5vw;
+                    }
+                }
+    
+                @media (min-width: 1280px) {
+                    [cs-header] [cs-header-logo] {
+                        height: 4vw;
+                    }
+                }
+    
+                [cs-header] #CS_MOBILE_MENU_CONTAINER {
+                    cursor: pointer;
+                }
+    
+                [cs-header] #CS_MOBILE_MENU_CONTAINER > div {
+                    background-color: #ffffff;
+                }
+
+                [cs-header] [data-nav-list="desktop"] {
+                    max-width: 600px;
+                }
+    
+                [cs-header] [data-nav-list="desktop"] a, [cs-header] [data-nav-list="mobile"] a {
+                    color: #ffffff;
+                    white-space: nowrap;
+                }
+    
+                [cs-header] [data-nav-list="mobile"] {
+                    background-color: #292323;
+                    padding: 1rem 2rem;
+                    width: 100vw;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                    gap: 1rem;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                }
+    
+                @media (min-width: 768px) {
+                    [cs-header] [data-nav-list="mobile"] {
+                        display: none;
+                    }
+                }
+    
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                      to { opacity: 1; }
+                }
+    
+                @keyframes fadeOut {
+                    from { opacity: 1; }
+                      to { opacity: 0; }
+                }
+    
+                [cs-header] [data-group-nav-list="mobile"] {
+                    display: none;
+                    padding-left: 0.5rem;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+    
+                [cs-header] [data-group-nav-list="mobile"] > *:not(i) {
+                    font-size: 1.125rem;
+                }
+    
+                [cs-header] i {
+                    font-size: 1.5rem;
+                }
+    
+                [cs-header] [data-nav-id] [data-group-nav-list="desktop"] {
+                    background-color: #292323;
+                    position: absolute;
+                    top: 100%;
+                    width: fit;
+                    display: none;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(255 255 255 / 0.25);
+                    border: solid 2px rgb(255 255 255 / 0.25);
+                    transition: all 1s ease-in-out;
+                    padding: 1rem 1.5rem;
+                    width: fit;
+                    animation: fadeIn 300ms;
+                }
+    
+                [cs-header] [data-group-nav-list="desktop"] > * {
+                    white-space: nowrap;
+                }
+    
+                
+    
+                [cs-header] [data-cta] {
+                    cursor: pointer;
+                }
+    
+                [cs-header] [data-cta] > * {
+                    color: #ffffff;
+                }
+    
+                [cs-header] div[data-mobile-nav-id] {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                
+                [cs-header] [data-cta], [cs-header] [data-cta] a {
+                    width: 100%;
+                    white-space: nowrap;
+                }
+    
+                @media (min-width: 1024px) {
+                    [cs-header] div[data-mobile-nav-id] {
+                        width: fit-content;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    [cs-header] [data-cta], [cs-header] [data-cta] a {
+                        width: fit-content;
+                    }
+                }
+                
+                
+                [cs-header] {
+                    z-index: 99;
+                    position: fixed;
+                    width: 100%;
+                }
+                
+                </style>
+                <header coresel-persist cs-header data-section-theme="3">
+                    <div class="relative flex flex-row justify-between items-center p-4 pr-6 pl-6">
+                        <img cs-header-logo src="https://coresel.nyc3.cdn.digitaloceanspaces.com/core-3e198e0e258df9434/bb86cf89-1e42-476b-b057-697a870e0532.png"></img>
+                        <div class="flex flex-row justify-between items-center gap-12">
+                            <nav data-nav-list="desktop" class="hidden lg:flex flex-row justify-start items-center flex-wrap gap-4">
+            <a style="z-index: 5;" href="https://www.geteventsmeee.com/1707794648770_84f5">Contact Us</a>
+            </nav>
+                            
+        <div data-cta class="invisible">
+        </div>
+            
+                        </div>
+                        <div class="lg:hidden">
+            <div id="CS_MOBILE_MENU_CONTAINER" data-open="false" class="relative flex flex-col justify-center items-stretch gap-1 lg:hidden w-8 h-6">
+                <div class="w-full h-1 rounded-sm transition-all transition-300"></div>
+                <div class="w-full h-1 rounded-sm transition-all transition-300"></div>
+            </div>
+            </div>
+                        
+            <nav data-open="false" data-nav-list="mobile">
+            <a href="https://www.geteventsmeee.com/1707794648770_84f5">Contact Us</a>
+            
+        <div data-cta class="invisible">
+        </div>
+            
+            </nav>
+            
+                    </div>
+                </header>
+                <section data-padding="true" class='flex flex-col justify-start items-center py-4 px-4 lg:py-12 lg:px-8' id="171c745b-6a0e-40bf-8685-d818705c6791" data-section-theme="1" class="py-8 lg:py-12" style="background-size: cover; background-image: url(undefinedcore-3e198e0e258df9434/e6d7d0b0-02b1-4efb-8bfe-54d3bdcbbf7e.jpeg);"><div uuid="171c745b-6a0e-40bf-8685-d818705c6791" class='absolute top-0 left-0 w-full h-full' style='background-color: var(--theme-1-bg); opacity: 0.777; z-index: 2;'></div><div data-block='1' id="171c745b-6a0e-40bf-8685-d818705c6791@ae3d1f1e-6970-4db1-aa00-e4573539137e" class='relative grid grid-cols-1 w-full'><div data-container data-align="center" data-padding="false" id="171c745b-6a0e-40bf-8685-d818705c6791@dccf0e30-d7ec-4bfc-9d50-b0bb3870419e" class=' flex flex-col justify-start items-start gap-3'><h2 id="171c745b-6a0e-40bf-8685-d818705c6791@3f4010c5-a043-474a-9d26-f9138b04fd99" class="w-full " >Contact Us</h2></div></div><div data-block='2' id="171c745b-6a0e-40bf-8685-d818705c6791@2d356ee0-1848-4419-8193-fcb664c59320" class='relative grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 w-full'><div data-container data-align="left" data-padding="true" id="171c745b-6a0e-40bf-8685-d818705c6791@cf1787c1-0739-444f-80ac-e3643f6d0d1a" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><p id="171c745b-6a0e-40bf-8685-d818705c6791@2236d1c6-7827-4d4e-af42-a1dd9f404851" class="w-full " >New text block</p></div><div data-container data-align="left" data-padding="true" id="171c745b-6a0e-40bf-8685-d818705c6791@da255617-a5fe-42f1-afb4-3657e971df60" class='px-4 py-2 lg:px-8 lg:py-4 flex flex-col justify-start items-start gap-3'><a id="171c745b-6a0e-40bf-8685-d818705c6791@9f1ac641-e2af-4c3a-9768-496ef64bd59f" class="w-full " >New link block</a></div></div></section>
